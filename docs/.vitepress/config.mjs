@@ -2,7 +2,8 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "My Awesome Project",
+  base: '/vitepress-demo/',
+  title: "Jade's VitePress Site",
   description: "A VitePress Site",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
@@ -24,5 +25,8 @@ export default defineConfig({
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
     ]
-  }
+  },
+  head: [
+    ['link',{ rel: 'icon', href: '/vitepress-demo/logo.png'}], //部署到vitepress仓库
+  ],
 })
